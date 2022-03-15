@@ -24,3 +24,8 @@ class TestData:
     int_comp = 'Interview is completed'
     no_fed = 'No candidates available to give feedback'
     search_job = 'SDET2'
+    InterviewerErrorMessage = 'Failed to login and display the buttons'
+    JobopeningsErrorMessage = 'Failed to validate Job Openings Page'
+    DashboardErrorMessage = 'Failed to validate Dahsboard'
+    ProfilePageErrorMessage = 'Failed to validate Profile page'
+    InterviewRequestsErrorMessage = 'Failed to perform  actions accept, reject and reschedule'
