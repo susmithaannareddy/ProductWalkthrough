@@ -16,8 +16,11 @@ class TestInterviewer(BaseTest):
             flag1 = interviewerpage.is_multitouch_button_visible()
             assert flag1 == TestData.ExpectedValue
             interviewerpage.click_multi_icon_button()
+            JobOpeningsButton = interviewerpage.is_job_openings_button()
+            assert JobOpeningsButton == TestData.ExpectedValue
+
         except:
-            print("Failed to login and display the buttons")
+            print(TestData.InterviewerErrorMessage)
 
     # Clicks on Job Openings button and validate the search button based on the specified text
 
@@ -34,7 +37,7 @@ class TestInterviewer(BaseTest):
             DescriptionButton = interviewerpage.click_view_description()
             assert DescriptionButton == TestData.ExpectedValue
         except:
-            print("Failed to validate Job Openings Page")
+            print(TestData.JobopeningsErrorMessage)
 
     # Clicks on Profile page and validates the Profile page buttons
 
@@ -54,7 +57,7 @@ class TestInterviewer(BaseTest):
             availability = interviewerpage.is_profile_availability()
             assert availability == TestData.ExpectedValue
         except:
-            print("Failed to Validate Profile Page")
+            print(TestData.ProfilePageErrorMessage)
 
     # Clicks on Dashboard and verifies data in the Dashboard table
 
@@ -68,7 +71,7 @@ class TestInterviewer(BaseTest):
             interviewerpage.click_dashboard_link()
 
         except:
-            print("Failed to validate Dahsboard")
+            print(TestData.DashboardErrorMessage)
 
     # Checks Interview meeting requests and validates accept, reschedule and reject buttons
 
@@ -86,4 +89,4 @@ class TestInterviewer(BaseTest):
             RescheduleBtn = interviewerpage.is_reschedule_button_visible()
             assert RescheduleBtn == TestData.ExpectedValue
         except:
-            print("Failed to perform  actions accept, reject and reschedule")
+            print(TestData.InterviewerErrorMessage)
