@@ -157,9 +157,6 @@ class RecruiterPage(BasePage):
             self.do_click(self.panelist_sel)
             time.sleep(2)
             self.do_send_keys(self.time_date, '03/16/2022 06:24 am')
-            time.sleep(2)
-            self.do_click(self.save_invite)
-
         except:
             print(TestData.Error_msg2)
 
@@ -188,23 +185,20 @@ class RecruiterPage(BasePage):
 
     def Dashboard(self):
         self.waiting()
-        self.Login(TestData.username, TestData.password)
+        self.Login(TestData.RecruiterUsername, TestData.Password)
         time.sleep(3)
 
         # Verifying the feedback button
         time.sleep(5)
         a = self.driver.find_elements(*RecruiterPage.feedback_data)
-        print(a)
-
         for i in a:
-            print(i.text)
             try:
+                print(i.text)
                 if i.text == 'VIEW FEEDBACK':
-                    self.clickable(i)
-                    time.sleep(2)
-                    self.do_click(i)
-                    print(TestData.int_comp)
-                break
+                    if self.clickable(i):
+                        self.do_click(i)
+                        print(TestData.int_comp)
+                        break
             except:
                 self.do_click(self.next)
                 continue

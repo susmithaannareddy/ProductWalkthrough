@@ -41,7 +41,7 @@ class BasePage:
         self.driver.maximize_window()
 
     def scrolling(self, slider, width):
-        ActionChains(self.driver).click_and_hold(slider).move_by_offset(width / 2, 0).release().perform()
+        ActionChains(self.driver).click_and_hold(slider).move_by_offset(width / 4, 0).release().perform()
 
     def clickable(self, by_locator):
         WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(by_locator))

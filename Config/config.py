@@ -1,5 +1,5 @@
 class TestData:
-    Chrome_Executable_Path = "/Users/asusmitha/Desktop/chromedriver.exe"
+    Chrome_Executable_Path = "/Users/visrilakshmi/Downloads/chromedriver.exe"
 
     Base_Url = "https://hashedinhire-frontend-urtjok3rza-wl.a.run.app/login"
     InterviewerUserName = "susmitha@gmail.com"
@@ -15,6 +15,7 @@ class TestData:
     Skill3 = 'React'
     Min_data = '2'
     Max_data = '5'
+    exp_data = 'VIEW FEEDBACK'
     Res_Data = 'Building web applications'
     Upload_file = 'C:/Users/visrilakshmi/Downloads/API Track Main Assignment Day 2.docx'
     Alert_msg = 'Job has been Created!'
